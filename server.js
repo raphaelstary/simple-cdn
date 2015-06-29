@@ -1,12 +1,9 @@
 var express = require('express');
 var app = express();
-var PORT = 8080;
-var STATIC_FILES = 'www-built';
 var Clients = require('./clients');
 
-app.get('/stats', function (req, res) {
-    res.send('stats not implemented yet');
-});
+var PORT = 8080;
+var STATIC_FILES = 'www-built';
 
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -22,5 +19,6 @@ app.use(function(req, res) {
     res.status(404).send('page not found');
 });
 
-app.listen(PORT);
-console.log('simple CDN started on port ' + PORT);
+var server = app.listen(PORT, function () {
+    console.log('simple CDN started on port ' + server.address().port);
+});

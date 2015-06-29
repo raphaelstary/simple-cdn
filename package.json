@@ -4,6 +4,6 @@
     "repository": "https://github.com/raphaelstary/simple-cdn.git",
     "main": "server.js",
     "dependencies": {
-        "express": "~4.13.0"
+        "express": "^4.13.0"
     }
 }
