@@ -12,5 +12,9 @@ Object.keys(Clients).forEach(function (key) {
     app.use('/' + Clients[key], express.static(STATIC_FILES));
 });
 
+app.use(function(req, res) {
+    res.status(404).send('page not found');
+});
+
 app.listen(PORT);
 console.log('simple CDN started on port ' + PORT);
