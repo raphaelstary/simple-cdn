@@ -8,6 +8,12 @@ app.get('/stats', function (req, res) {
     res.send('stats not implemented yet');
 });
 
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
+
 Object.keys(Clients).forEach(function (key) {
     app.use('/' + Clients[key], express.static(STATIC_FILES));
 });
