@@ -1,0 +1,9 @@
+{
+    "name": "simple-cdn",
+    "description": "my simple static file server",
+    "repository": "https://github.com/raphaelstary/simple-cdn.git",
+    "main": "server.js",
+    "dependencies": {
+        "express": "~4.13.0"
+    }
+}
