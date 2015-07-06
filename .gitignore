@@ -43,4 +43,3 @@ build/config/buildinfo.properties
 
 node_modules
 www-built
-clients.js
